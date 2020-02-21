@@ -8,6 +8,7 @@ const TodoList = ({ notesList, handleDelete, handleCompletion }) => {
       {notesList.map(item => {
         return (
           <TodoItem
+            key={item.id}
             note={item.note}
             id={item.id}
             handleDelete={handleDelete}

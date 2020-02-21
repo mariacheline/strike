@@ -24,11 +24,14 @@ const reducer = (state = initialState, action) => {
             isCompleted: !item.isCompleted
           };
         }
+        return item;
       });
+
       return {
         ...state,
         notes: toggledNotes
       };
+
     case DELETE_NOTE:
       return {
         ...state,

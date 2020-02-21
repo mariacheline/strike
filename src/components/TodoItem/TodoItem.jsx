@@ -9,7 +9,7 @@ const TodoItem = ({
   handleCompletion
 }) => {
   return (
-    <StyledItem key={id}>
+    <StyledItem isCompleted={isCompleted}>
       <input type="checkbox" onChange={() => handleCompletion(id)} />
       <span>{note}</span>
       <button onClick={() => handleDelete(id)}>x</button>
