@@ -7,11 +7,33 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_NOTE:
-      return {};
+      const newNote = {
+        note: action.payload.note,
+        id: action.payload.id
+      };
+
+      return {
+        ...state,
+        notes: [...state.notes, newNote]
+      };
     case COMPLETE_NOTE:
-      return {};
+      const toggledNotes = state.notes.map(item => {
+        if (item.id === action.payload.id) {
+          return {
+            ...item,
+            isCompleted: !item.isCompleted
+          };
+        }
+      });
+      return {
+        ...state,
+        notes: toggledNotes
+      };
     case DELETE_NOTE:
-      return {};
+      return {
+        ...state,
+        notes: state.notes.filter(item => item.id !== action.payload.id)
+      };
     default:
       return state;
   }

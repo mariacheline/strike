@@ -1,12 +1,19 @@
 import React from "react";
+import { StyledItem } from "./style";
 
-const TodoItem = ({ note }) => {
+const TodoItem = ({
+  id,
+  note,
+  isCompleted,
+  handleDelete,
+  handleCompletion
+}) => {
   return (
-    <li>
-      <input type="checkbox" />
+    <StyledItem key={id}>
+      <input type="checkbox" onChange={() => handleCompletion(id)} />
       <span>{note}</span>
-      <button>x</button>
-    </li>
+      <button onClick={() => handleDelete(id)}>x</button>
+    </StyledItem>
   );
 };
 

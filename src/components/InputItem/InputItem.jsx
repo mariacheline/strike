@@ -1,10 +1,10 @@
 import React from "react";
 
-const InputItem = () => {
+const InputItem = ({ onChange, value }) => {
   return (
     <div>
-      <input type="text" />
-      <button>add</button>
+      <input type="text" onChange={onChange} value={value} />
+      <button type="submit">add</button>
     </div>
   );
 };

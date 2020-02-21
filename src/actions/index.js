@@ -2,7 +2,7 @@ export const ADD_NOTE = "ADD_NOTE";
 export const DELETE_NOTE = "DELETE_NOTE";
 export const COMPLETE_NOTE = "COMPLETE_NOTE";
 
-todoId = 0;
+let todoId = 0;
 
 export const addNote = n => {
   return {
@@ -23,7 +23,7 @@ export const completeNote = id => {
   };
 };
 
-export default deleteNote = id => {
+export const deleteNote = id => {
   return {
     type: DELETE_NOTE,
     payload: {
