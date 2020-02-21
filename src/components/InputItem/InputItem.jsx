@@ -1,10 +1,12 @@
 import React from "react";
 
-const InputItem = ({ onChange, value }) => {
+const InputItem = ({ disabled, onChange, value }) => {
   return (
     <div>
       <input type="text" onChange={onChange} value={value} />
-      <button type="submit">add</button>
+      <button type="submit" disabled={disabled}>
+        add
+      </button>
     </div>
   );
 };

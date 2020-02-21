@@ -6,19 +6,19 @@ import { InputItem, TodoList } from "./components";
 class App extends React.Component {
   state = {
     note: "",
-    disable: false
+    disabled: true
   };
 
   handleChange = e => {
-    const { note, disable } = this.state;
+    const { note, disabled } = this.state;
     this.setState(
       {
-        note: e.target.value
+        note: e.target.value.trim()
       },
       () => {
         if (!note) {
           this.setState({
-            disable: !disable
+            disabled: !disabled
           });
         }
       }
@@ -26,11 +26,11 @@ class App extends React.Component {
   };
 
   handleSubmit = e => {
-    const { note, disable } = this.state;
+    const { note, disabled } = this.state;
     const { add_note } = this.props;
     this.setState({
       note: "",
-      disable: !disable
+      disabled: !disabled
     });
     e.preventDefault();
     console.log(note);
@@ -48,16 +48,21 @@ class App extends React.Component {
   };
 
   render() {
-    const { note } = this.state;
+    const { note, disabled } = this.state;
     const { notes } = this.props;
     return (
       <div className="app">
         <form onSubmit={this.handleSubmit}>
-          <InputItem onChange={this.handleChange} value={note} />
+          <InputItem
+            onChange={this.handleChange}
+            value={note}
+            disabled={disabled}
+          />
           <TodoList
             notesList={notes}
             handleDelete={this.handleDelete}
             handleCompletion={this.handleCompletion}
+            disabled={disabled}
           />
         </form>
       </div>
