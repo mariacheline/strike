@@ -13,7 +13,7 @@ class App extends React.Component {
     const { note, disabled } = this.state;
     this.setState(
       {
-        note: e.target.value.trim()
+        note: e.target.value
       },
       () => {
         if (!note) {

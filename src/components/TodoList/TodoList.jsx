@@ -1,10 +1,11 @@
 import React from "react";
 
 import { TodoItem } from "../../components";
+import { StyledTodoList } from "./style";
 
 const TodoList = ({ notesList, handleDelete, handleCompletion }) => {
   return (
-    <ul>
+    <StyledTodoList>
       {notesList.map(item => {
         return (
           <TodoItem
@@ -17,7 +18,7 @@ const TodoList = ({ notesList, handleDelete, handleCompletion }) => {
           />
         );
       })}
-    </ul>
+    </StyledTodoList>
   );
 };
 

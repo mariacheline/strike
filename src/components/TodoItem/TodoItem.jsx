@@ -1,4 +1,5 @@
 import React from "react";
+import close from "../../assets/close.svg";
 import { StyledItem } from "./style";
 
 const TodoItem = ({
@@ -10,9 +11,17 @@ const TodoItem = ({
 }) => {
   return (
     <StyledItem isCompleted={isCompleted}>
-      <input type="checkbox" onChange={() => handleCompletion(id)} />
-      <span>{note}</span>
-      <button onClick={() => handleDelete(id)}>x</button>
+      <label labelFor="note">
+        <input
+          name="note"
+          type="checkbox"
+          onChange={() => handleCompletion(id)}
+        />
+        <span className="note-text">{note}</span>
+      </label>
+      <button onClick={() => handleDelete(id)}>
+        <img src={close} alt="close_icon" />
+      </button>
     </StyledItem>
   );
 };
