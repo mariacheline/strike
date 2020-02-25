@@ -8,7 +8,7 @@ const InputItem = ({ disabled, onChange, value }) => {
         type="text"
         onChange={onChange}
         value={value}
-        placeholder="add an Item"
+        placeholder="...add a task"
       />
       <button type="submit" disabled={disabled}>
         add

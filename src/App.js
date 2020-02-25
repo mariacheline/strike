@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { addNote, completeNote, deleteNote } from "./actions";
-import { InputItem, TodoList } from "./components";
+import { CompletedList, InputItem, TodoList } from "./components";
 
 class App extends React.Component {
   state = {
@@ -58,13 +58,25 @@ class App extends React.Component {
             value={note}
             disabled={disabled}
           />
+        </form>
+
+        <div className="todo-list">
+          {notes.length > 0 && <h4>To do:</h4>}
           <TodoList
             notesList={notes}
             handleDelete={this.handleDelete}
             handleCompletion={this.handleCompletion}
-            disabled={disabled}
           />
-        </form>
+        </div>
+
+        <div className="completed-list">
+          {notes.length > 0 && <h4>Completed</h4>}
+          <CompletedList
+            notesList={notes}
+            handleDelete={this.handleDelete}
+            handleCompletion={this.handleCompletion}
+          />
+        </div>
       </div>
     );
   }
