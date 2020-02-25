@@ -16,7 +16,7 @@ class App extends React.Component {
         note: e.target.value
       },
       () => {
-        if (!note) {
+        if (!note && !note.length) {
           this.setState({
             disabled: !disabled
           });
