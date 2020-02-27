@@ -1,10 +1,10 @@
 ## About this project
 
-This project is used to learn.
+This todo app is used to learn new technologies:
 
-[x] React project structure
-[x] Redux implementation
-[ ] ...
+\n[x] React project structure
+\n[x] Redux implementation
+\n[ ] ...
 
 ---
 
