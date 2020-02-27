@@ -16,6 +16,7 @@ const TodoItem = ({
           name="note"
           type="checkbox"
           onChange={() => handleCompletion(id)}
+          checked={isCompleted}
         />
         <span className="note-text">{note}</span>
       </label>

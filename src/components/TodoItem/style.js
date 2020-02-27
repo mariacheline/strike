@@ -34,6 +34,7 @@ export const StyledItem = styled.li`
     outline: none;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
 
     img {
       width: 100%;

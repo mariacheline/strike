@@ -30,10 +30,6 @@ const GlobalStyle = createGlobalStyle`
    width: 360px;
    margin-top: 5rem;
  }
-
- .completed-list {
-   margin-top: 2rem;
- }
 `;
 
 const store = createStore(reducer);
