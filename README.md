@@ -2,9 +2,11 @@
 
 This todo app is used to learn new technologies:
 
-\n[x] React project structure
-\n[x] Redux implementation
-\n[ ] ...
+[x] React project structure
+
+[x] Redux implementation
+
+[ ] ...
 
 ---
 
