@@ -10,7 +10,7 @@ export const StyledInputItem = styled.div`
 
   input {
     flex: 1 0 80%;
-    padding: 0.5rem 0;
+    padding-bottom: 0.3rem;
     border: none;
 
     font-family: inherit;
@@ -26,17 +26,18 @@ export const StyledInputItem = styled.div`
     padding: 0.5rem 0;
     border: none;
 
+    background-color: #eee;
     color: #666;
 
     font-size: inherit;
     font-family: inherit;
 
-    cursor: pointer;
     outline: none;
+    cursor: pointer;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 
     &:hover {
-      background-color: #eee;
+      background-color: #fff;
     }
 
     &:active {

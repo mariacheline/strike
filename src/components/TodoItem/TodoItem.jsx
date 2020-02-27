@@ -11,11 +11,12 @@ const TodoItem = ({
 }) => {
   return (
     <StyledItem isCompleted={isCompleted}>
-      <label labelFor="note">
+      <label>
         <input
           name="note"
           type="checkbox"
           onChange={() => handleCompletion(id)}
+          checked={isCompleted}
         />
         <span className="note-text">{note}</span>
       </label>

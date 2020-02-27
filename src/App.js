@@ -58,13 +58,13 @@ class App extends React.Component {
             value={note}
             disabled={disabled}
           />
-          <TodoList
-            notesList={notes}
-            handleDelete={this.handleDelete}
-            handleCompletion={this.handleCompletion}
-            disabled={disabled}
-          />
         </form>
+
+        <TodoList
+          notesList={notes}
+          handleDelete={this.handleDelete}
+          handleCompletion={this.handleCompletion}
+        />
       </div>
     );
   }
