@@ -30,6 +30,7 @@ export const StyledItem = styled.li`
     height: 10px;
     margin-left: auto;
     margin-right: 2rem;
+    background-color: transparent;
     border: none;
     outline: none;
     opacity: 0;
